@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Text Rotator </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+	<h2 id="text">Be
+		<span style="display: initial;"> ~ Are Best</span>
+		<span> ~ Healthy</span>
+		<span> ~ Creative</span>
+		<span> ~ Amazing</span>
+		<span> ~ Unique</span>
+		<span> ~ Cool</span>
+		<span> ~Awesome</span>
+	</h2>
+
+	<script type="text/javascript">
+		var text = document.getElementById('text');
+		var word = text.getElementsByTagName('span');
+
+		var i = 0;
+		function rotator(){
+			word[i].style.display = 'none';
+			i = (i + 1) % word.length;
+			word[i].style.display = 'initial';
+		}
+		setInterval(rotator, 2000);
+	</script>
+</body>
+</html>
